@@ -9,7 +9,10 @@
             "repo": "https://github.com/WTBCTechDays/app2",
             "release_status": "latestBuild",
             "AuthTokenSecret": "GhTokenWorkflow"
-        }
+        },
+        {
+            "repo": "https://github.com/businesscentralapps/publicdependency"
+        }    
     ],
     "generateDependencyArtifact": true
 }
