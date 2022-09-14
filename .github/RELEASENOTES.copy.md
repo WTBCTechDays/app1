@@ -1,4 +1,58 @@
-## Preview
+﻿## preview
+
+Note that when using the preview version of AL-Go for GitHub, you need to Update your AL-Go system files, as soon as possible when told to do so.
+
+### Issues
+- Issue #143 Commit Message for **Increment Version Number** workflow
+- Issue #160 Create local DevEnv aith appDependencyProbingPaths
+- Issue #156 Versioningstrategy 2 doesn't use 24h format
+- Issue #155 Initial Add existing app fails with "Cannot find path"
+- Issue #152 Error when loading dependencies from releases
+- Issue #168 Regression in preview fixed
+- Issue #189 Warnings: Resource not accessible by integration
+- Issue #190 PublishToEnvironment is not working with AL-Go-PTE@preview
+- Issue #186 AL-GO build fails for multi-project repository when there's nothing to build
+
+### AppSource Apps
+- New workflow: Publish to AppSource
+- Added new GitHub Action "Deliver" to deliver build output to Storage or AppSource
+- Refactor CI/CD and Release workflows to use new deliver action
+
+### Settings
+- New Repo setting: CICDPushBranches can be specified as an array of branches, which triggers a CI/CD workflow on commit. Default is main', release/\*, feature/\*
+- New Repo setting: CICDPullRequestBranches can be specified as an array of branches, which triggers a CI/CD workflow on pull request. Default is main
+- New Repo setting: CICDSchedule can specify a CRONTab on when you want to run CI/CD on a schedule. Note that this will disable Push and Pull Request triggers unless specified specifically using CICDPushBranches or CICDPullRequestBranches
+- New Repo setting: UpdateGitHubGoSystemFilesSchedule can specify a CRONTab on when you want to Update AL-Go System Files. Note that when running on a schedule, update AL-Go system files will perfom a direct commit and not create a pull request.
+- New project Setting: AppSourceContext should be a compressed json structure containing authContext for submitting to AppSource. The BcContainerHelperFunction New-ALGoAppSourceContext will help you create this structure.
+- New project Setting: AppSourceContinuousDelivery. Set this to true in enable continuous delivery for this project to AppSource. This requires AppSourceContext and AppSourceProductId to be set as well
+- New project Setting: AppSourceProductId should be set to the product Id of this project in AppSource
+- New project Setting: AppSourceMainAppFolder. If you have multiple appFolders, this is the folder name of the main app to submit to AppSource.
+
+### All workflows
+- Support 2 folder levels projects (apps\w1, apps\dk etc.)
+- Better error messages for if an error occurs within an action
+- Special characters are now supported in secrets
+- Initial support for agents running inside containers on a host
+
+### Update AL-Go System Files Workflow
+- workflow now displays the currently used template URL when selecting the Run Workflow action
+
+### CI/CD workflow
+- Better detection of changed projects
+- appDependencyProbingPaths did not support multiple projects in the same repository for latestBuild dependencies
+- appDependencyProbingPaths with release=latestBuild only considered the last 30 artifacts
+- Use mutex around ReadSecrets to ensure that multiple agents on the same host doesn't clash
+- Add lfs when checking out files for CI/CD to support checking in dependencies
+- Continue on error with Deploy and Deliver
+
+### CI/CD and Publish To New Environment
+- Base functionality for selecting a specific GitHub runner for an environment
+- Include dependencies artifacts when deploying (if generateDependencyArtifacts is true)
+
+### localDevEnv.ps1 and cloudDevEnv.ps1
+- Display clear error message if something goes wrong
+
+## v1.5
 
 ### Issues
 - Issue #100 - Add more resilience to localDevEnv.ps1 and cloudDevEnv.ps1
