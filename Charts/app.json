@@ -11,7 +11,12 @@
     "url":  "",
     "logo":  "",
     "dependencies":  [
-
+                        {
+                            "id": "94ad1db1-b5a0-4171-a379-7b8459380be2",
+                            "name": "ChartsBase",
+                            "publisher": "Tobias Weidemann",
+                            "version": "1.0.0.0"
+                        }
                      ],
     "screenshots":  [
 
