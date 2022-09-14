@@ -16,6 +16,12 @@
                             "name": "ChartsBase",
                             "publisher": "Tobias Weidemann",
                             "version": "1.0.0.0"
+                        },
+                        {
+                            "id":  "ebf72ec5-8525-4314-b5f9-b2af68ff813d",
+                            "name":  "Common",
+                            "publisher":  "Tobias Weidemann",
+                            "version":  "1.0.0.0"
                         }
                      ],
     "screenshots":  [
