@@ -22,7 +22,13 @@
                             "name":  "Common",
                             "publisher":  "Tobias Weidemann",
                             "version":  "1.0.0.0"
-                        }
+                        },
+                        {
+                            "id": "afc4ea02-a561-4a0f-ad97-c2bb6f2bc0e3",
+                            "publisher": "Freddy",
+                            "name": "PrivateDependencyApp",
+                            "version": "1.0.0.0"
+                       }
                      ],
     "screenshots":  [
 

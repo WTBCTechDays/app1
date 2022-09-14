@@ -14,5 +14,8 @@
             "repo": "https://github.com/businesscentralapps/publicdependency"
         }    
     ],
+    "installApps": [
+        "https://businesscentralapps.blob.core.windows.net/privatedependency/preview/privatedependency-apps.zip?sv=2021-04-10&st=2022-09-09T02%3A17%3A38Z&se=2023-09-10T02%3A17%3A00Z&sr=b&sp=r&sig=g%2FpbeWPaYnvDNVh4RjuVDo5gqXKXbA7g%2Bphqh9%2FntYQ%3D"
+    ],
     "generateDependencyArtifact": true
 }
