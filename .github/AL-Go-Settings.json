@@ -1,7 +1,7 @@
-﻿{
-    "type":  "PTE",
-    "templateUrl":  "https://github.com/microsoft/AL-Go-PTE@preview",
-    "environments":  [
-                         "WTTEST"
-                     ]
+{
+  "type": "PTE",
+  "templateUrl": "https://github.com/microsoft/AL-Go-PTE@preview",
+  "environments": [
+    "WTTEST"
+  ]
 }

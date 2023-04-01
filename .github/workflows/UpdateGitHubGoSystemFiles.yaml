@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       templateUrl:
-        description: Template Repository URL (current is https://github.com/microsoft/AL-Go-PTE@main)
+        description: Template Repository URL (current is https://github.com/microsoft/AL-Go-PTE@preview)
         required: false
         default: ''
       directCommit:
@@ -65,6 +65,7 @@ jobs:
             Write-Host "Using Template Url: $templateUrl"
             Add-Content -Path $env:GITHUB_ENV -Value "templateUrl=$templateUrl"
           }
+
       - name: Calculate DirectCommit
         env:
           directCommit: ${{ github.event.inputs.directCommit }}
@@ -79,6 +80,7 @@ jobs:
             $directCommit = 'Y'
           }
           Add-Content -Path $env:GITHUB_ENV -Value "DirectCommit=$directCommit"
+
       - name: Update AL-Go system files
         uses: microsoft/AL-Go-Actions/CheckForUpdates@v3.0
         with:
