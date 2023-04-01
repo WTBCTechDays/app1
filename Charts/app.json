@@ -18,12 +18,6 @@
                             "version": "1.0.0.0"
                         },
                         {
-                            "id":  "ebf72ec5-8525-4314-b5f9-b2af68ff813d",
-                            "name":  "Common",
-                            "publisher":  "Tobias Weidemann",
-                            "version":  "1.0.0.0"
-                        },
-                        {
                             "id": "afc4ea02-a561-4a0f-ad97-c2bb6f2bc0e3",
                             "publisher": "Freddy",
                             "name": "PrivateDependencyApp",
