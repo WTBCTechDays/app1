@@ -10,17 +10,10 @@
   "help": "",
   "url": "",
   "logo": "",
-  "dependencies": [
-    {
-      "id": "1631b0e7-f7b2-429b-948d-318e375c66da",
-      "publisher": "Freddy",
-      "name": "PublicDependencyApp",
-      "version": "1.0.0.0"
-    }
-  ],
+  "dependencies": [],
   "screenshots": [],
   "platform": "1.0.0.0",
-  "application": "20.0.0.0",
+  "application": "22.1.0.0",
   "idRanges": [
     {
       "from": 50100,
